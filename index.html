@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    /* General styles */
+    body {
+      background-color: #fff9e6;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0066cc;
+    }
+
+    /* Form container */
+    .form-container {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    /* Input fields and labels */
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    label {
+      text-align: left;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: -10px;
+    }
+
+    /* Submit buttons */
+    button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 48%;
+      margin: 10px 1%;
+    }
+
+    button:hover {
+      background-color: #004d99;
+    }
+
+    .reset-btn {
+      background-color: #f44336;
+    }
+
+    .reset-btn:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Marquee */
+    marquee {
+      font-size: 18px;
+      color: #ff4081;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Image */
+    .form-image {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <marquee>Register as fast as possible!</marquee>
+    <h1>Registration Form</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Computer_keyboard.png/220px-Computer_keyboard.png" alt="Keyboard Image" class="form-image">
+    
+    <form id="registration-form">
+      <div>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" required>
+        <p class="error" id="firstname-error"></p>
+      </div>
+      
+      <div>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" required>
+        <p class="error" id="lastname-error"></p>
+      </div>
+      
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter Age" required>
+        <p class="error" id="age-error"></p>
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+        <p class="error" id="email-error"></p>
+      </div>
+      
+      <div>
+        <label for="mobile">Mobile No:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter Mobile No" required>
+        <p class="error" id="mobile-error"></p>
+      </div>
+      
+      <div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      
+      <div>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="domain">Domain:</label>
+        <select id="domain" name="domain" required>
+          <option value="ai">AI</option>
+          <option value="ml">ML</option>
+          <option value="ds">DS</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="permanent-address">Permanent Address:</label>
+        <input type="text" id="permanent-address" name="permanent-address" placeholder="Enter Permanent Address" required>
+        <p class="error" id="permanent-address-error"></p>
+      </div>
+      
+      <div>
+        <label for="identity-proof">Proof of Identity:</label>
+        <select id="identity-proof" name="identity-proof" required>
+          <option value="aadhar">Aadhar Card</option>
+          <option value="passport">Passport</option>
+          <option value="visa">Visa</option>
+        </select>
+        <p class="error" id="identity-proof-error"></p>
+      </div>
+      
+      <div>
+        <label for="captcha">Solve this: 3^2 + 2^3 = ?</label>
+        <input type="number" id="captcha" name="captcha" required>
+        <p class="error" id="captcha-error"></p>
+      </div>
+      
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+
+</body>
+</html>
